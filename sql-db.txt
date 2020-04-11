@@ -1,0 +1,197 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.3
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 15, 2020 at 12:59 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 5.6.38
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `server_side_development_roisin`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `actors`
+--
+
+CREATE TABLE `actors` (
+  `actorID` int(11) NOT NULL,
+  `actorName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `actors`
+--
+
+INSERT INTO `actors` (`actorID`, `actorName`) VALUES
+(1, 'Alexis Bledel'),
+(2, 'Kate Siegel');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'Comedy'),
+(2, 'Horror'),
+(3, 'Drama'),
+(4, 'Action'),
+(5, 'Thriller'),
+(6, 'Documentaries'),
+(7, 'Music');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `records`
+--
+
+CREATE TABLE `records` (
+  `recordID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `cast` varchar(255) NOT NULL,
+  `releaseDate` date NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `price` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `description`, `cast`, `releaseDate`, `image`, `price`) VALUES
+(1, 1, 'Legally Blonde', 'Elles boyfriend breaks up with her for a smarter girl as he plans to become a politician and joins Harward law school. Elle gets enrolled in the same school in an effort to teach him a lesson.', 'Reese Witherspoon, Luke Wilson and Selma Blair', '2001-08-26', 'legallyblonde.jpg', '15.99'),
+(2, 3, 'The Irishman', 'In the 1950s, truck driver Frank Sheeran gets involved with Russell Bufalino and his Pennsylvania crime family. As Sheeran climbs the ranks to become a top hit man, he also goes to work for Jimmy Hoffa -- a powerful Teamster tied to organized crime.', 'Robert De Niro, Joe Pesci and Steven Van Zandt', '2019-09-27', 'theirishman.jpg', '20.00'),
+(3, 5, 'Jurassic World', 'A theme park showcasing genetically-engineered dinosaurs turns into a nightmare for its tourists when one of the dinosaurs escapes its enclosure. An ex-military animal expert steps up to save the day.', 'Bryce Dallas Howard, Chris Pratt and Nick Robinson', '2015-07-09', 'jurassicworld.jpg', '30.00'),
+(4, 7, 'Pitch Perfect', 'Pitch Perfect is an American musical comedy film series created by Kay Cannon, loosely based on the non-fiction book Pitch Perfect: The Quest for Collegiate a Cappella Glory by Mickey Rapkin. Jason Moore directed the first film, and Elizabeth Banks direct', 'Anna Kendrick, Rebel Wilson and Brittany Snow', '2012-12-21', 'pitchperfect.jpg', '15.89'),
+(5, 2, 'Look Away', 'Maria is an alienated high school student whose life gets turned upside down when she switches places with her sinister mirror image.', 'India Eisley, Jason Isaacs and Mira Sorvino', '2019-01-10', 'lookaway.jpg', '14.95'),
+(6, 4, 'Spenser Confidential', 'To unravel a twisted murder conspiracy, a former police detective returns to Bostons criminal underworld.', 'Mark Wahlberg, Lliza Shlesinger and Winston Duke', '2020-03-06', 'spenserconfidential.jpg', '20.95'),
+(7, 5, 'The Coldest Game', 'A troubled math genius prepares to play in a U.S.-Soviet chess match as the Cuban missile crisis threatens world peace in 1962.', 'Lotte Verbeck, Bill Pullman and James Bloor', '2020-02-08', 'thecoldestgame.jpg', '20.95'),
+(8, 1, 'Bratz: The Movie', 'Meredith, the most popular girl in high school, manipulates four best friends into hating each other. The girls are reunited when they are forced to spend detention together.', 'Logan Browning, Janel Parrish and Nathalia Ramos', '2007-08-03', 'bratzthemovie.jpg', '20.95'),
+(10, 2, 'Dont Knock Twice', 'A mother desperately looking to reconnect with her estranged daughter attracts the attention of a demonic witch.', 'Katee Sackhoff, Lucy Boynton and Javier Botet', '2017-01-12', 'dontknocktwice.jpg', '18.75'),
+(11, 2, 'Eli', 'A boy becomes trapped in a haunted house while undergoing treatment for a rare disease.', 'Sadie Sink, Kelly Reilly and Charlie Shotwell', '2019-08-18', 'eli.jpg', '20.25'),
+(12, 3, 'After', 'Tessa Young is a dedicated student, dutiful daughter and loyal girlfriend to her high school sweetheart. Entering her first semester of college, Tessas guarded world opens up when she meets Hardin Scott, a mysterious and brooding rebel.', 'Hero Fiennes-Tiffin, Josephine Langford and Selma Blair', '2019-04-11', 'after.jpg', '20.00'),
+(13, 3, 'Freshman Year', 'The journey of two young people going off to college from their sheltered homes and different backgrounds to face the real world of battling peer pressure and falling in love.', 'Diallo Thomspon, Gregory Alan Williams and Benjamin A. Onyango', '2019-03-03', 'freshmanyear.jpg', '19.95'),
+(14, 4, '6 Underground', 'Six individuals from all around the globe, each the very best at what they do, have been chosen not only for their skill, but for a unique desire to delete their pasts to change the future.', 'Ryan Reyonlds, Melanie Laurent and Adria Arjona', '2019-12-13', '6underground.jpg', '15.50'),
+(15, 4, 'Wonder Woman', 'Princess Diana of an all-female Amazonian race rescues US pilot Steve. Upon learning of a war, she ventures into the world of men to stop Ares, the god of war, from destroying mankind.', 'Gal Gadot, Chris Pine and Robin Wright', '2017-05-15', 'wonderwomen.jpg', '15.40'),
+(16, 5, 'Hush', 'A deaf writer who retreated into the woods to live a solitary life must fight for her life in silence when a masked killer appears in her window.', 'Kate Siegel, John Gallagher Jr and Michael Trucco', '2016-03-12', 'hush.jpg', '16.95'),
+(17, 5, 'Triple Frontier', 'Former Special Forces operatives reunite to plan a heist in a sparsely populated multi-border zone of South America. For the first time in their prestigious careers, these unsung heroes undertake this dangerous mission for themselves instead of the countr', 'Ben Affleck, Charlie Hunnam and Oscar Isaac', '2019-03-03', 'triplefrontier.jpg', '15.00'),
+(18, 6, 'The Great Hack', 'Exploring how a data company named Cambridge Analytica came to symbolise the dark side of social media in the wake of the 2016 U.S. presidential election, as uncovered by journalist Carole Cadwalladr.', 'Brittany Kaiser, David Carroll and Carole Cadwalladar', '2019-01-26', 'thehack.jpg', '12.99'),
+(19, 6, 'Oasis: Supersonic', 'A revealing look at the meteoric rise of seminal 90s rock band Oasis, weaving never-before-seen concert footage with candid interviews and a firsthand account of the backstage sibling rivalry that threatened to destroy the band.', 'Liam Gallagher, Noel Gallagher and Paul Arthurs', '2016-09-14', 'oasis.jpg', '15.20'),
+(20, 7, 'La La Land', 'Sebastian and Mia are drawn together by their common desire to do what they love.', 'Emma Stone, Ryan Gosling and John Legend', '2016-11-09', 'lalaland.jpg', '16.95'),
+(21, 7, 'Annie', 'Annie, a young girl, has lived all her life in the foster care of the cruel Miss Hannigan. Her life takes a drastic turn when New York mayoral candidate William Stacks decides to adopt her.', 'Quvenzhane Wallis, Jamie Foxx and Cameron Diaz', '2014-12-20', 'annie.jpg', '20.95'),
+(22, 1, 'Isnt It Romantic', 'Natalie is a New York architect who works hard to get noticed at her job, but is more likely to deliver coffee and bagels than design the citys next skyscraper.', 'Rebel Wilson, Liam Hemsworth and Priyanka Chopra', '2019-02-13', 'isntitromantic.jpg', '9.99'),
+(23, 1, 'Status Update', 'A teenager makes a remarkable discovery: a magical application that makes his social media updates come true.', 'Ross Lynch, Olivia Holt and Courtney Eaton', '2018-02-09', 'statusupdate.jpg', '19.95');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shows`
+--
+
+CREATE TABLE `shows` (
+  `showID` int(11) NOT NULL,
+  `actorID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `releaseDate` date NOT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `shows`
+--
+
+INSERT INTO `shows` (`showID`, `actorID`, `name`, `description`, `releaseDate`, `image`) VALUES
+(1, 1, 'Gilmore Girls', 'Lorelai Gilmore, an independent young woman, shares a close bond with her wilful daughter, Rory. However, her relationship with her own mother is strained.', '2000-10-05', 'gilmoregirls.jpg'),
+(2, 2, 'The Haunting of Hill House', 'This modern reimagining of the Shirley Jackson novel follows siblings who, as children, grew up in what would go on to become the most famous haunted house in the country.', '2018-10-12', 'thehauntingofhillhouse.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `actors`
+--
+ALTER TABLE `actors`
+  ADD PRIMARY KEY (`actorID`);
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+
+--
+-- Indexes for table `records`
+--
+ALTER TABLE `records`
+  ADD PRIMARY KEY (`recordID`),
+  ADD UNIQUE KEY `productName` (`name`);
+
+--
+-- Indexes for table `shows`
+--
+ALTER TABLE `shows`
+  ADD PRIMARY KEY (`showID`),
+  ADD UNIQUE KEY `productDescription` (`description`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `actors`
+--
+ALTER TABLE `actors`
+  MODIFY `actorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `records`
+--
+ALTER TABLE `records`
+  MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `shows`
+--
+ALTER TABLE `shows`
+  MODIFY `showID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
