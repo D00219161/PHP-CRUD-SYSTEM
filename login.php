@@ -7,7 +7,6 @@
  */
 session_start();
 
-
 /**
  * Include ircmaxell's password_compat library.
  */
@@ -75,12 +74,14 @@ if(isset($_POST['login'])){
 ?>
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
-        <title>Login</title>
+        <title>Login Please</title>
+        <link rel="stylesheet" type="text/css" href="./SASS/main.css">
     </head>
     <body>
-        <h1>Login</h1>
+        <h1>Login Please</h1>
         <form action="login.php" method="post">
             <label for="username">Username</label>
             <input type="text" id="username" name="username"><br>

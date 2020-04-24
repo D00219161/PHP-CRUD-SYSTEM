@@ -49,6 +49,7 @@ $statement3->closeCursor();
 <h1>NETFLIX</h1>
 <nav>
 <a href="manage_films.php">Films</a>
+<a href="display_users.php">Users</a>
 <a href="logout.php">Logout</a>
 <nav></header>
 <main>
