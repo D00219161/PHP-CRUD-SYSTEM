@@ -32,14 +32,6 @@
         <?php foreach ($users as $user) : ?>
         <tr>
             <td><?php echo $user['userName']; ?></td>
-            <td>
-                <form action="delete_user.php" method="post"
-                      id="delete_user_form">
-                    <input type="hidden" name="user_id"
-                           value="<?php echo $user['id']; ?>">
-                    <input type="submit" value="Delete">
-                </form>
-            </td>
         </tr>
         <?php endforeach; ?>
     </table>
