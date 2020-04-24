@@ -70,5 +70,5 @@ if ($category_id == null || $category_id == false || $name == null || $descripti
     $statement->execute();
     $statement->closeCursor();
 // Display the records List page
-    include('index.php');
+    include('films.php');
 }

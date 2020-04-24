@@ -49,7 +49,7 @@ $statement3->closeCursor();
 <h1>NETFLIX</h1>
 <nav>
 <a href="show.php">Shows</a>
-<a href="index.php">Films</a>
+<a href="films.php">Films</a>
 <nav></header>
 <main>
 <h1>Shows</h1>
@@ -59,7 +59,7 @@ $statement3->closeCursor();
 <nav>
 <ul>
 <?php foreach ($actors as $actor) : ?>
-<li><a href=".?actor_id=<?php echo $actor['actorID']; ?>">
+<li><a href="?actor_id=<?php echo $actor['actorID']; ?>">
 <?php echo $actor['actorName']; ?>
 </a>
 </li>

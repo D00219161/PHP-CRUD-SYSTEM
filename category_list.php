@@ -50,7 +50,7 @@
         <input id="add_category_button" type="submit" value="Add">
     </form>
     <br>
-    <p><button><a href="index.php">Homepage</a></button></p>
+    <p><button><a href="films.php">Films</a></button></p>
     </main>
     <footer>
         <p>&copy; <?php echo date("Y"); ?> NETFLIX, Roisin McPhillips.</p>
