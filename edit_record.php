@@ -64,6 +64,6 @@ $statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $statement->closeCursor();
 // Display the film page
-include('films.php');
+include('manage_films.php');
 }
 ?>

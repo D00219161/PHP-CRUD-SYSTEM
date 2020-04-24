@@ -58,6 +58,6 @@ $statement->bindValue(':show_id', $show_id);
 $statement->execute();
 $statement->closeCursor();
 // Display the show page
-include('show.php');
+include('manage_shows.php');
 }
 ?>

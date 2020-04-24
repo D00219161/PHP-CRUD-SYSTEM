@@ -73,7 +73,7 @@ if(isset($_POST['register'])){
     //If the signup process is successful.
     if($result){
         //What you do here is up to you!
-        echo 'Thank you for registering with our website.';
+        echo 'Thank you for registering with our website.';        
     }
     
 }
@@ -88,13 +88,23 @@ if(isset($_POST['register'])){
     <body>
         <h1>Register</h1>
         <form action="register.php" method="post">
+
             <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username" pattern="[A-Za-z].{5,}" 
+            title="Must contain characters that are of at least one uppercase and lowercase letter" required>
+            <br>
+
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
+            <input type="text" id="password" name="password" title="Must be text(Upper & Lower) and numbers" required>
+            <br>
+
             <label for="email">Email</label>
-            <input type="text" id="email" name="email"><br>
+            <input type="text" id="email" name="email" title="Must be text" required>
+            <br>
             <input type="submit" name="register" value="Register"></button>
+            <input type="reset">
+            <br>
         </form>
+        <p><button><a href="manage_films.php">Go To Films Page</a></button></p>
     </body>
 </html>

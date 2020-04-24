@@ -66,5 +66,5 @@ if ($actor_id == null || $actor_id == false || $name == null || $description == 
     $statement->execute();
     $statement->closeCursor();
 // Display the shows List page
-    include('show.php');
+    include('manage_shows.php');
 }

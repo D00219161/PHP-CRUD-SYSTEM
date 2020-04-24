@@ -13,5 +13,5 @@ if ($show_id != false && $actor_id != false) {
     $statement->closeCursor();
 }
 // display show's page
-include('show.php');
+include('manage_shows.php');
 ?>

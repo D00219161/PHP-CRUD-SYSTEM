@@ -63,7 +63,7 @@ $statement->closeCursor();
             <input type="reset">
             <br>
         </form>
-        <p><button><a href="index.php">Homepage</a></button></p>
+        <p><button><a href="manage_films.php">Films</a></button></p>
     </main>
     <footer>
         <p>&copy; <?php echo date("Y"); ?> NETFLIX, Roisin McPhillips.</p>

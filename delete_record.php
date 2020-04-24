@@ -13,5 +13,5 @@ if ($record_id != false && $category_id != false) {
     $statement->closeCursor();
 }
 // display the Films Page
-include('films.php');
+include('manage_films.php');
 ?>

@@ -52,7 +52,7 @@
         <input id="add_actor_button" type="submit" value="Add">
     </form>
     <br>
-    <p><button><a href="show.php">Shows</a></button></p>
+    <p><button><a href="manage_shows.php">Shows</a></button></p>
     </main>
     <footer>
         <p>&copy; <?php echo date("Y"); ?> NETFLIX, Roisin McPhillips.</p>
