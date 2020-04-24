@@ -7,20 +7,6 @@
  */
 session_start();
 
-/**
- * Check if the user is logged in.
- */
-if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
-    //User not logged in. Redirect them back to the login.php page.
-    header('Location: login.php');
-    exit;
-}
-
-/**
- * Print out something that only logged in users can see.
- */
-
-echo 'Congratulations! You are logged in!';
 
 /**
  * Include ircmaxell's password_compat library.
@@ -40,9 +26,10 @@ if(isset($_POST['login'])){
     //Retrieve the field values from our login form.
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
+    $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
     
     //Retrieve the user account information for the given username.
-    $sql = "SELECT id, username, password FROM users WHERE username = :username";
+    $sql = "SELECT id, username, password, email FROM users WHERE username = :username";
     $stmt = $pdo->prepare($sql);
     
     //Bind value.
@@ -74,7 +61,7 @@ if(isset($_POST['login'])){
             $_SESSION['logged_in'] = time();
             
             //Redirect to our protected page, which we called home.php
-            header('Location: index.php');
+            header('Location: manage_films.php');
             exit;
             
         } else{
@@ -99,6 +86,8 @@ if(isset($_POST['login'])){
             <input type="text" id="username" name="username"><br>
             <label for="password">Password</label>
             <input type="text" id="password" name="password"><br>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email"><br>
             <input type="submit" name="login" value="Login">
         </form>
     </body>

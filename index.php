@@ -48,8 +48,10 @@ $statement3->closeCursor();
 <header>
 <h1>NETFLIX</h1>
 <nav>
-<a href="show.php">Shows</a>
-<a href="index.php">Films</a>
+<a href ="show.php">Shows</a>
+<a href="login.php">Login</a>
+<a href="register.php">Register</a>
+<a href="logout.php">Logout</a>
 <nav>
 </header>
 <main>
@@ -91,8 +93,6 @@ $statement3->closeCursor();
 </tr>
 <?php endforeach; ?>
 </table>
-<p><button><a href="add_record_form.php">Add a Film</a></button>
-<button><a href="category_list.php">Edit Genres</a></button></p>
 </section>
 </main>
 <footer>
