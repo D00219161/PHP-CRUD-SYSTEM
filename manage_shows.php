@@ -14,6 +14,11 @@ if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
     exit;
 }
 
+/**
+ * Print out something that only logged in users can see.
+ */
+echo '<script type="text/javascript">alert("Congratulations! You are logged in!");</script>';
+
 // Connect to the database
 require_once('database.php');
 // Set the default actor to the ID of 1

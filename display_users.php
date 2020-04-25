@@ -1,4 +1,19 @@
 <?php
+
+/**
+ * Start the session.
+ */
+session_start();
+
+/**
+ * Check if the user is logged in.
+ */
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+    //User not logged in. Redirect them back to the login.php page.
+    header('Location: login.php');
+    exit;
+}
+
 // Connect to the database
 require_once('database.php');
 // Set the default user to the ID of 1
@@ -45,7 +60,7 @@ $statement2->closeCursor();
 <nav></header>
 <main>
 <h1>Users Displayed</h1>
-<section>
+<section class="users" users>
 <!-- display a table of users from the database -->
 <h2>Users</h2>
 <table>
