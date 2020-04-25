@@ -73,7 +73,8 @@ if(isset($_POST['register'])){
     //If the signup process is successful.
     if($result){
         //What you do here is up to you!
-        echo 'Thank you for registering with our website.';        
+        echo 'Thank you for registering with our website.';  
+        header('Location: login.php');      
     }
     
 }

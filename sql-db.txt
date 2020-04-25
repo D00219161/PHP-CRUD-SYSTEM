@@ -39,7 +39,11 @@ CREATE TABLE `actors` (
 
 INSERT INTO `actors` (`actorID`, `actorName`) VALUES
 (1, 'Alexis Bledel'),
-(2, 'Kate Siegel');
+(2, 'Kate Siegel'),
+(3, 'Nina Dobrev'),
+(4, 'Tyler Posey'),
+(5, 'Marlo Kelly'),
+(6, 'Joseph Morgan');
 
 -- --------------------------------------------------------
 
@@ -131,7 +135,14 @@ CREATE TABLE `shows` (
 
 INSERT INTO `shows` (`showID`, `actorID`, `name`, `description`, `releaseDate`, `image`) VALUES
 (1, 1, 'Gilmore Girls', 'Lorelai Gilmore, an independent young woman, shares a close bond with her wilful daughter, Rory. However, her relationship with her own mother is strained.', '2000-10-05', 'gilmoregirls.jpg'),
-(2, 2, 'The Haunting of Hill House', 'This modern reimagining of the Shirley Jackson novel follows siblings who, as children, grew up in what would go on to become the most famous haunted house in the country.', '2018-10-12', 'thehauntingofhillhouse.jpg');
+(2, 2, 'The Haunting of Hill House', 'This modern reimagining of the Shirley Jackson novel follows siblings who, as children, grew up in what would go on to become the most famous haunted house in the country.', '2018-10-12', 'thehauntingofhillhouse.jpg'),
+(3, 3, 'The Vampire Diaries', 'On her first day at high school, Elena meets Stefan and immediately feels a connection with him. However, what she doesnt know is that Stefan and his brother, Damon, are in fact vampires.', '2009-09-10', 'thevampirediaries.jpg'),
+(4, 4, 'Teen Wolf', 'Scott McCall, an awkward teen, turns into a werewolf after being bitten by one a day before sophomore year. He must learn to adapt to his new identity while handling life as a teenager.', '2011-06-05', 'teenwolf.jpg'),
+(5, 5, 'Dare Me', 'Dare Me is an unflinching exploration of volatile female friendships, jealousy, loyalty and the dynamics of power in a small Midwestern town.', '2019-12-29', 'dareme.jpg'),
+(6, 6, 'The Originals', 'The Original family of vampires settle down in the city of New Orleans that they helped to construct several decades ago. They encounter old buddies and confront new foes.', '2013-10-03', 'theoriginals.jpg');
+
+
+
 
 --
 -- Indexes for dumped tables
