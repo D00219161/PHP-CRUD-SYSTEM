@@ -74,7 +74,7 @@ if(isset($_POST['register'])){
     if($result){
         //What you do here is up to you!
         echo 'Thank you for registering with our website.';  
-        header('Location: login.php');      
+        header('Location: login.php'); /* Redirect browser to Login Page */     
     }
     
 }
@@ -82,12 +82,14 @@ if(isset($_POST['register'])){
 ?>
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
-        <title>Register</title>
+        <title>Register Here Please</title>
+        <link rel="stylesheet" type="text/css" href="./SASS/main.css">
     </head>
     <body>
-        <h1>Register</h1>
+        <h1>Register Here Please</h1>
         <form action="register.php" method="post">
 
             <label for="username">Username</label>
@@ -96,16 +98,31 @@ if(isset($_POST['register'])){
             <br>
 
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" title="Must be text(Upper & Lower) and numbers" required>
+            <input type="password" id="password" name="password" title="Must be text(Upper & Lower) and numbers" required>
+            <!-- An element to toggle between password visibility -->
+            <input type="checkbox" onclick="myFunction()">Show Password Entered
             <br>
 
             <label for="email">Email</label>
             <input type="text" id="email" name="email" title="Must be text" required>
             <br>
+
             <input type="submit" name="register" value="Register"></button>
             <input type="reset">
             <br>
         </form>
-        <p><button><a href="manage_films.php">Go To Films Page</a></button></p>
-    </body>
+        <script>
+function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<footer>
+        <p>&copy; <?php echo date("Y"); ?> NETFLIX, Roisin McPhillips.</p>
+    </footer>
+</body>
 </html>

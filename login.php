@@ -59,8 +59,8 @@ if(isset($_POST['login'])){
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['logged_in'] = time();
             
-            //Redirect to our protected page, which we called home.php
-            header('Location: manage_films.php');
+            //Redirect to our protected page, which we called manage_films.php
+            header('Location: manage_films.php'); 
             exit;
             
         } else{
@@ -68,7 +68,6 @@ if(isset($_POST['login'])){
             die('Incorrect username / password combination!');
         }
     }
-    
 }
  
 ?>
@@ -83,13 +82,37 @@ if(isset($_POST['login'])){
     <body>
         <h1>Login Please</h1>
         <form action="login.php" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
+
+        <label for="username">Username</label>
+            <input type="text" id="username" name="username" title="Must contain characters that are of at least one uppercase and lowercase letter" required>
+            <br>
+
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
+            <input type="password" id="password" name="password" title="Must be text(Upper & Lower) and numbers" required>
+            <!-- An element to toggle between password visibility -->
+            <input type="checkbox" onclick="myFunction()">Show Password Entered
+            <br>
+
             <label for="email">Email</label>
-            <input type="text" id="email" name="email"><br>
+            <input type="text" id="email" name="email" title="Must be text" required>
+            <br>
+
             <input type="submit" name="login" value="Login">
+            <input type="reset">
+            <br>
         </form>
-    </body>
+        <script>
+        function myFunction() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+<footer>
+        <p>&copy; <?php echo date("Y"); ?> NETFLIX, Roisin McPhillips.</p>
+    </footer>
+</body>
 </html>

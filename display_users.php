@@ -17,7 +17,7 @@ $statement1->bindValue(':user_id', $user_id);
 $statement1->execute();
 $user = $statement1->fetch();
 $statement1->closeCursor();
-$user_name = $user['userName'];
+$user_name = $user['username'];
 // Get all users
 $queryAllUsers = 'SELECT * FROM users
 ORDER BY id';
@@ -47,12 +47,12 @@ $statement2->closeCursor();
 <h1>Users Displayed</h1>
 <section>
 <!-- display a table of users from the database -->
-<h2><?php echo $user_name; ?></h2>
+<h2>Users</h2>
 <table>
 <tr>
 <th>Name</th>
 <th>Password</th>
-<th>Emails</th>
+<th>Email</th>
 </tr>
 <?php foreach ($users as $user) : ?>
 <tr>
