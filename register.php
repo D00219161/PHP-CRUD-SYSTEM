@@ -84,6 +84,7 @@ if(isset($_POST['register'])){
 <html>
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
         <title>Register Here Please</title>

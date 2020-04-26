@@ -23,12 +23,11 @@ html {
   }
   
   h1 {
-    font-family: $h1-bodyfont;
     font-size: 150%;
     margin: 0;
     padding: .5em 0 .25em;
     color: #000000;
-    opacity: 80px;
+    font-family: $h1-bodyfont;
   }
   
   h2 {
