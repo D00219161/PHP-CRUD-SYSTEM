@@ -1,0 +1,88 @@
+html {
+    background-color: $body-color;
+  }
+  
+  body {
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1100px;
+    margin: 0 auto;
+    background-color: $background-color;
+    border: 1.2px solid #000;
+    padding: .8em 2em;
+  }
+  
+  main {
+    margin: 0;
+  }
+  
+  section {
+    float: left;
+    width: 900px;
+    padding-bottom: 1.5em;
+  }
+  
+  h1 {
+    font-family: $h1-bodyfont;
+    font-size: 150%;
+    margin: 0;
+    padding: .5em 0 .25em;
+    color: #000000;
+    opacity: 80px;
+  }
+  
+  h2 {
+    font-size: 120%;
+    margin: 0;
+    padding: .25em 0 .5em;
+    color: $h2-color;
+  }
+  
+  ul {
+    margin: 0 0 1em 0;
+    padding: 0 0 0 2.5em;
+  }
+  
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px dashed black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+    border: 2px solid $table-bordercolor;
+   } 
+  
+  th{
+    text-align: center;
+    padding: .3em .5em .2em .5em;
+  }
+  
+  form {
+    margin: 0;
+  }
+  
+  br {
+    clear: left;
+  }
+  
+  
+  .right {
+    text-align: right;
+  }
+  
+  .last_paragraph {
+    margin-bottom: 2em;
+  }
+  
+  .margin_top_increase {
+    margin-top: 1em;
+  }
