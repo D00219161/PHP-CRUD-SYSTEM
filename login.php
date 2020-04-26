@@ -79,7 +79,7 @@ if(isset($_POST['login'])){
     <head>
         <meta charset="UTF-8">
         <title>Login Please</title>
-        <link rel="stylesheet" type="text/css" href="./SASS/main.css">
+        <link rel="stylesheet" type="text/css" href="sass/main.css">
     </head>
     <body>
         <h1>Login Please</h1>

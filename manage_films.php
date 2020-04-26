@@ -64,7 +64,7 @@ $statement3->closeCursor();
 <!-- the head section -->
 <head>
 <title>NETFLIX</title>
-<link rel="stylesheet" type="text/css" href="./SASS/main.css">
+<link rel="stylesheet" type="text/css" href="sass/main.css">
 </head>
 <!-- the body section -->
 <body>

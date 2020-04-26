@@ -42,7 +42,7 @@ $statement3->closeCursor();
 <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 <title>NETFLIX</title>
-<link rel="stylesheet" type="text/css" href="./SASS/main.css">
+<link rel="stylesheet" type="text/css" href="sass/main.css">
 </head>
 <!-- the body section -->
 <body>
