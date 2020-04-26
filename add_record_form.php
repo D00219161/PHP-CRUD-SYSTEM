@@ -12,6 +12,7 @@ $statement->closeCursor();
 <html>
 <!-- the head section -->
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 <head>
     <title>NETFLIX</title>
     <link rel="stylesheet" type="text/css" href="./SASS/main.css">

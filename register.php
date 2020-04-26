@@ -83,6 +83,7 @@ if(isset($_POST['register'])){
 <!DOCTYPE html>
 <html>
 <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <head>
         <meta charset="UTF-8">
         <title>Register Here Please</title>
@@ -90,7 +91,7 @@ if(isset($_POST['register'])){
     </head>
     <body>
         <h1>Register Here Please</h1>
-        <form action="register.php" method="post">
+        <form action="register.php" method="post" id="reg">
 
             <label for="username">Username</label>
             <input type="text" id="username" name="username" pattern="[A-Za-z].{5,}" 
